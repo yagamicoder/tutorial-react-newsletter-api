@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/spartan082189/tutorial-react-newsletter-api#readme",
   "dependencies": {
+    "request": "^2.81.0",
     "restify": "^5.2.0",
     "restify-cors-middleware": "^1.0.1"
   }
