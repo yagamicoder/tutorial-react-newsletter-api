@@ -20,9 +20,9 @@ function subscribe(req, res, next) {
     try {
       var respObj = {}; //Initial response object
       if (response.statusCode === 200) {
-        respObj = { success: `Subscribed using ${email}!`, message: response.body };
+        respObj = { success: `Subscribed using ${email}!`, message: JSON.parse(response.body) };
       } else {
-        respObj = { error: `Error trying to subscribe ${email}. Please try again.`, message: response.body };
+        respObj = { error: `Error trying to subscribe ${email}. Please try again.`, message: JSON.parse(response.body) };
       }
       res.send(respObj);
     } catch (err) {
