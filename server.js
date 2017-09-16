@@ -39,6 +39,7 @@ var cors = corsMiddleware({
 });
 
 server.use(restify.plugins.bodyParser());
+
 //Use CORS...
 server.pre(cors.preflight);
 server.use(cors.actual);
